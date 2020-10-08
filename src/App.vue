@@ -1,10 +1,10 @@
-<template>
+    <!-- <div>
+      <template>
   <div id="app">
     <router-view />
   </div>
 </template>
 <script>
-// import {mapState} from 'vuex'
 
 export default {
   data() {
@@ -37,7 +37,6 @@ export default {
         }
       ]
       if (this.$router.options.routes.length <= 2) {
-        // this.$router.options.routes.push(this.routes)
         this.$router.addRoutes(this.routes)
       }
     }
@@ -52,4 +51,22 @@ export default {
 }
 </script>
 <style lang="scss">
+</style>
+
+      
+      </div> -->
+<template>
+  <div class="app">
+      <router-view></router-view>
+  </div>
+</template>
+
+<script>
+  export default {
+    
+  }
+</script>
+
+<style scoped>
+
 </style>

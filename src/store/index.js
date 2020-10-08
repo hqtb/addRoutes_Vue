@@ -24,12 +24,14 @@ export default new Vuex.Store({
     }, payload) {
       let res = await axios.get('http://localhost:3000/getALL');
       // 
+      // debugger
       res.data.obj.forEach((v, i) => {
         v.name = v.name;
         v.path = v.path,
           v.component = () => import(`@/views/${v.name}.vue`);
       })
       let resobkj = GetTree(res.data.obj, 0)
+      // debugger
       resobkj.forEach((item) => {
         if (!item.name || !item.tilte || !item.path) {
           delete item['pid']
